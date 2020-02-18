@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     #local
+    'home_page.apps.HomePageConfig',
     'ice_cream.apps.IceCreamConfig',
 ]
 
