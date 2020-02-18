@@ -1,0 +1,13 @@
+{% extends 'home_page/base.html' %}
+
+{% block content %}
+
+    {% for icecream in object_list %}
+
+        <h2>
+            <a href="{% url 'icecream:detail' icecream.id %}">{{icecream.flavor}}</a>
+        </h2>
+
+    {% endfor %}
+
+{% endblock content %}
