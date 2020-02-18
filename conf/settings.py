@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    #local
+    'ice_cream.apps.IceCreamConfig',
 ]
 
 MIDDLEWARE = [
