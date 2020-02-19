@@ -7,6 +7,12 @@ class IndexView(generic.ListView):
     template_name = 'ice_cream/index.html'
     model = IceCream
 
+    def get_queryset(self):
+        if 'selection' in self.kwargs:
+            return IceCream.objects.filter(available=self.kwargs['selection'].upper())
+        return IceCream.objects.all()
+        
+
 class DetailView(generic.DetailView):
     template_name = 'ice_cream/detail.html'
     model = IceCream
@@ -19,7 +25,7 @@ class CreateView(generic.CreateView):
 
 class DeleteView(generic.DeleteView):
     model= IceCream
-    sucess_url = reverse_lazy('ice_cream:detail.html')
+    sucess_url = reverse_lazy('ice_cream/detail.html')
 
 class UpdateView(generic.UpdateView):
     template_name = 'ice_cream/edit.html'
