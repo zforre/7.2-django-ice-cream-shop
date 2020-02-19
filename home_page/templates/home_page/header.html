@@ -1,5 +1,7 @@
-<ul>
-    <li><a href="{% url 'home_page:index' %}">Home</a></li>
-    <li><a href="{% url 'home_page:about' %}">About</a></li>
-    <li><a href="{% url 'ice_cream:index' %}">Ice Cream</a></li>
-</ul>
+<nav class="row">
+    <ul class="col d-flex">
+        <li class="mr-3"><a href="{% url 'home_page:index' %}">Home</a></li>
+        <li class="mr-3"><a href="{% url 'ice_cream:index' %}">Ice Cream</a></li>
+        <li><a href="{% url 'home_page:about' %}">About</a></li>
+    </ul>
+</nav>
