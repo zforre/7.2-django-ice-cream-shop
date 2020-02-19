@@ -9,6 +9,7 @@ class IndexView(generic.ListView):
 class DetailView(generic.DetailView):
     template_name = 'ice_cream/detail.html'
     model = IceCream
+    fields = ['flavor', 'base']
 
 class CreateView(generic.CreateView):
     template_name = 'ice_cream/create.html'

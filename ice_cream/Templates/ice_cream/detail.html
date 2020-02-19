@@ -2,6 +2,8 @@
 
 {% block content %}
 
-    {{ice_cream.flavor}}
+    <p>{{object.flavor}}</p>
+    <p>{{object.base}}</p>
+    <a href="{% url 'ice_cream:index' %}">back</a>
 
 {% endblock content %}

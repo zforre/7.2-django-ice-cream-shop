@@ -6,37 +6,38 @@ from datetime import date
 class IceCream(models.Model):
     flavor = models.CharField(max_length=50)
 
-    
-    chocolate = 'choc'
-    vanilla = 'van'
+    CHOCOLATE = 'choc'
+    VANILLA = 'van'
     base_choices = [
-        (chocolate, 'chocolate'), 
-        (vanilla, 'vanilla'),
+        (CHOCOLATE, 'CHOCOLATE'), 
+        (VANILLA, 'VANILLA'),
     ]
 
     base = models.CharField(max_length=20, choices=base_choices, default='vanilla') 
 
-    daily = 'da'
-    weekly = 'we'
-    seasonal = 'se'
+    DAILY = 'DAILY'
+    WEEKLY = 'WEEKLY'
+    SEASONAL = 'SEASONAL'
     available_choices= [
-        (daily,'daily'), 
-        (weekly,'weekly'), 
-        (seasonal,'seasonal')
+        (DAILY,'daily'), 
+        (WEEKLY,'weekly'), 
+        (SEASONAL,'seasonal')
     ]
 
     available = models.CharField(max_length=20, choices=available_choices, default='daily')
 
-    
-    # featured = models.BooleanField()
+    featured = models.BooleanField(default=False)
 
     date_churned = models.DateField(default=date.today)
+
+    class Meta:
+        ordering = ['flavor']
 
     def __str__(self):
         return self.flavor
         
 
-        def get_absolute_url(self):
+    def get_absolute_url(self):
             return reverse('icecream:index')
 
 
