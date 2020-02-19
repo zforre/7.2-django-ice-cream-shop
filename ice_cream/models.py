@@ -27,6 +27,7 @@ class IceCream(models.Model):
 
     available = models.CharField(max_length=20, choices=available_choices, default='daily')
 
+    
     # featured = models.BooleanField()
 
     date_churned = models.DateField(default=date.today)
