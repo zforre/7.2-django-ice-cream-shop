@@ -1,5 +1,6 @@
 from django.views import generic
 from .models import IceCream
+from django.urls import reverse
 from django.urls import reverse_lazy
 
 # Create your views here.
@@ -24,8 +25,10 @@ class CreateView(generic.CreateView):
     fields = '__all__' #or ['flavor']
 
 class DeleteView(generic.DeleteView):
-    model= IceCream
-    sucess_url = reverse_lazy('ice_cream/detail.html')
+    model = IceCream
+    success_url = reverse_lazy('ice_cream/index.html')
+    def get_absolute_url(self):
+            return reverse_lazy('ice_cream:index')
 
 class UpdateView(generic.UpdateView):
     template_name = 'ice_cream/edit.html'
