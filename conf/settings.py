@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     #local
     'home_page.apps.HomePageConfig',
     'ice_cream.apps.IceCreamConfig',
+    
 ]
 
 MIDDLEWARE = [
@@ -122,4 +123,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
 
