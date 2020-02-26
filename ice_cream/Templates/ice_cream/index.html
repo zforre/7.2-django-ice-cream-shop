@@ -9,7 +9,11 @@
             <a href="{% url 'ice_cream:detail' ice_cream.id %}">{{ice_cream.flavor}}</a>
         </h2>
         
+        
 
     {% endfor %}
+
+    <a class='btn btn-primary' href="{% url 'ice_cream:create' object.id %}">Add an Ice Cream</a>
+    
 
 {% endblock content %}
