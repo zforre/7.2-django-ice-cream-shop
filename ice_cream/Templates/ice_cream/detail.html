@@ -4,6 +4,9 @@
 
     <p>{{object.flavor}}</p>
     <p>{{object.base}}</p>
-    <a href="{% url 'ice_cream:index' %}">back</a>
+    
+    <a class='btn btn-primary' href="{% url 'ice_cream:index' %}">Back</a>
+    <a class='btn btn-success' href="{% url 'ice_cream:edit' object.id %}">Edit this Ice Cream</a>
+    <a class='btn btn-danger' href="{% url 'ice_cream:delete' object.id %}">Delete this Ice Cream</a>
 
 {% endblock content %}

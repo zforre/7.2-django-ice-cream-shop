@@ -25,6 +25,7 @@ class CreateView(generic.CreateView):
     fields = '__all__' #or ['flavor']
 
 class DeleteView(generic.DeleteView):
+    trmplate_name = 'ice_cream/icecream_confirm_delete.html'
     model = IceCream
     success_url = reverse_lazy('ice_cream/index.html')
     def get_absolute_url(self):
