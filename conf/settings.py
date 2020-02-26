@@ -25,7 +25,7 @@ SECRET_KEY = 'gd97u9(@7y=n$(++k9f77(*-#2^$p-z!rgsdkk*tgqxcu5yr_%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = 'ice-cream-shop-zforre.herokuapp.com']
+ALLOWED_HOSTS = ['ice-cream-shop-zforre.herokuapp.com']
 
 
 # Application definition
